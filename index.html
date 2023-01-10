@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Curriculum Vitae</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+	
+	<!-- Wrapper/Envoltorio para estructurar la base de la página como una caja grande -->
+	
+	<div class="wrapper">
+		
+		<!-- CARD 1 - PRESENTACION -->
+		
+		<div class="card" id="Card1">
+			<div class="container" id="Card1Container">
+				<div id="Presentacion">
+					<h2>Hola, soy Sofía, una programadora junior</h2>
+				</div>
+			
+				<ul id="navBar">
+					<li class="navBarLI"><a class="navBarA" href="#Card2">Habilidades</a></li>
+
+					<li class="navBarLI"><a class="navBarA" href="#Card3">Sobre mí</a></li>
+					
+					<li class="navBarLI"><a class="navBarA" href="#Card4">Contacto</a></li>
+				</ul>
+			</div>
+
+			<div class="container" id="ContainerCard1Pic">
+				<img class="foto" id="Foto" src="girl.jpg" />
+			</div>
+		</div>
+		
+		<!-- CARD 2 - HABILIDADES -->
+		
+		<div class="card" id="Card2">
+			<div class="container" id="Card2Pic">
+				<img class="foto" id="Foto2" src="girl 2.jpg" />
+			</div>	
+			
+			<div class="container" id="habilidades">
+				<ul style="list-style-type: square;">
+					<h2>Habilidades destacadas</h2>
+					<br/>
+					<!--Skills; add icon-->
+					<li>HTML5; CSS3; JavaScript avanzado</li>
+					<br/>
+					<li>Inglés comprensión lectora avanzada; comunicación intermedia</li>
+					<br/>
+					<li>Comunación asertiva</li>
+					<br/>
+					<li>Manejo de proyectos</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- CARD 3 - SOBRE MI y CONTACTO -->
+		
+		<div class="card" id="Card3">
+			<div class="container" id="SobreMi">
+				<h2>Sobre mí</h2>
+				<p>Soy estudiante de Ingeniería en Informática, donde aprendí todo lo necesario para poder despempeñarme como una diseñadora web. Actualmente busco insertarme en el mundo laboral para poder poner en práctica todas las cosas que aprendí estos años.</p>
+			</div>
+
+			<div class="container" id="linksRelevantes">
+				<ul style="list-style-type: square;">
+					<h2>Links relevantes</h2>
+					
+					<!--Portfolio on github; add icon-->
+					<li>	<a href="https://github.com">Portfolio Github</a>	</li>
+					<br/>
+					<!--LinkedIn profile; add icon-->
+					<li>	<a href="https://linkedin.com">LinkedIn</a>	</li>
+					<br/>					
+					<!--Twitter profile; add icon-->
+					<li>	<a href="https://twitter.com">Twitter</a>	</li>
+					<br/>					
+					<!--Instagram profile; add icon-->
+					<li>	<a href="https://instagram.com">Instagram</a>	</li>
+				</ul>
+			</div>	
+		</div>
+		
+		<!-- CARD 4 - FORMULARIO CONTACTO -->
+		
+		<div class="card" id="Card4">
+			<div class="container" id="Card4Container">
+				<h2>Hablemos!</h2>
+
+				<form action="" method="post" name="formulario" >
+					<label>Nombre</label>
+					<br/>
+					<input type="text" name="nombre" placeholder="Ingrese su nombre">
+					<br/><br/>
+					<label>E-mail</label>
+					<br/>
+					<input type="email" name="email" placeholder="Ingrese su e-mail">
+					<br/><br/>
+					<label>Mensaje</label>
+					<br/>
+					<textarea name="mensaje" placeholder="Ingrese su mensaje"></textarea>
+					<br/><br/>
+					<input name="enviar" type="submit" value="Enviar">
+				</form>
+				
+				<br/>
+				
+				<div id="MailTel">
+					<a href="mailto:mitchell.douglas@example.com">sofia.fernandez@ejemplo.com</a>
+					<br/>
+					<a href="tel:123-123-1234">(123) 123-1234</a>
+				</div>
+			</div>
+		
+			<div id="Card4Pic">
+				<img class="foto" id="Foto3" src="girl 3.jpg" />
+			</div>		
+		</div>
+		
+		<!-- BOTON BACK TO TOP y PROGRESS BAR -->
+		
+		<button class="back-to-top">Volver</button>
+		
+		<div class="progress-bar" />
+	</div>
+	
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
