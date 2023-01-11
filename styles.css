@@ -1,5 +1,11 @@
 /* NOTA - PUEDO ORGANIZAR MEJOR TODO ESTO */
 
+/* Para el Dark Mode Toggle */
+
+@backcolor: #121212;
+@fontcolor: #f2f2f2;
+@altbackcolor: #f2f2f225;
+
 *
 {
   box-sizing: border-box;
@@ -10,7 +16,7 @@ html
 	scroll-behavior: smooth;
 }
 
-@keyframes fade1n
+@keyframes fadeIn
 {
 	from {opacity: 0} to {opacity: 1}
 }
@@ -23,7 +29,7 @@ body
 	max-width: 1920px;
 	margin: auto;
 	
-	animation: fade1n 3s;
+	animation: fadeIn 3s;
 }
 
 a:link, a:visited, a:hover, a:active
@@ -65,6 +71,7 @@ textarea
 {
 	margin: 5px;
 	border-radius: 20px;
+	height: 100vh;
 }
 
 .container
@@ -79,6 +86,7 @@ textarea
 {
 	border-radius: 100px;
 	max-width: 100%;
+	/*max-height: 90vh;*/
 	height: auto;
 	object-fit: cover;
 }
@@ -209,4 +217,66 @@ textarea
   position: fixed;
   top: 0;
   left: 0;
+}
+
+
+
+/* ******************************** */
+/*      BOTON TOGGLE DARK MODE      */
+/* ******************************** */
+
+/* Styling the checkbox input */
+
+#checkbox{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    appearance: none;
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    -o-appearance : none;
+    width: 80px;
+    height: 40px;
+    background: black;
+    border-radius: 22px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* styling the circle inside the checkbox input */
+
+#checkbox::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    background-color:white;
+    border-radius: 35px;
+    top: 2px;
+    left: 2px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+
+/* Switching to the dark when the checkbox is toggled */
+
+/*
+#checkbox:checked + .container{
+  background: rgb(19, 18, 18);
+  color: white;
+}
+*/
+
+/* moving the checkbox circle when it's toggled by the user */
+
+#checkbox:checked::before{
+    left: 40px;
+}
+
+
+/* changing the color of the checkbox when it's toggled */
+
+#checkbox:checked{
+    background: rgb(12, 177, 81);
 }
