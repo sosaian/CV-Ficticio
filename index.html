@@ -12,22 +12,22 @@
 	
 	<!-- Wrapper/Envoltorio para estructurar la base de la página como una caja grande -->
 	
-	<div class="wrapper">
+	<div class="wrapper" id="Wrapper">
 	
 		<!-- CARD 1 - PRESENTACION -->
 		
 		<div class="card" id="Card1">
 			<div class="container" id="Card1Container">
-				<div id="Presentacion">
+				<div id="presentation">
 					<h2>Hola, soy Sofía, una programadora junior</h2>
 				</div>
 			
 				<ul id="navBar">
 					<li class="navBarLI"><a class="navBarA" href="#Card2">Habilidades</a></li>
 
-					<li class="navBarLI"><a class="navBarA" href="#Card3">Sobre mí</a></li>
+					<li class="navBarLI"><a class="navBarA" href="#Card3">| Sobre mí</a></li>
 					
-					<li class="navBarLI"><a class="navBarA" href="#Card4">Contacto</a></li>
+					<li class="navBarLI"><a class="navBarA" href="#Card4">| Contacto</a></li>
 				</ul>
 			</div>
 
@@ -117,21 +117,25 @@
 				</div>
 			</div>
 		
-			<div id="Card4Pic">
+			<div class="container" id="Card4Pic">
 				<img class="foto" id="Foto3" src="girl 3.jpg" />
 			</div>		
 		</div>
 		
-		<!-- BOTON BACK TO TOP y PROGRESS BAR -->
+		<!-- BOTON BACK TO TOP -->
 		
 		<button class="back-to-top hidden">Volver</button>
 		
-		<div class="progress-bar" />
+		<!-- PROGRESS BAR -->
+		
+		<div class="progress-bar" /></div>
 		
 		<!-- PRUEBA TOGGLE DARK MODE -->
 		
 		<input type="checkbox" id="checkbox">
-	</div>
+		
+		<!-- PRUEBA BOTON NEXT CARD-->
+		<button class="next-card hidden" onclick="document.location='#Card4'">Siguiente</button>
 	
 	<script type="text/javascript" src="script.js"></script>
 </body>

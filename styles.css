@@ -1,11 +1,5 @@
 /* NOTA - PUEDO ORGANIZAR MEJOR TODO ESTO */
 
-/* Para el Dark Mode Toggle */
-
-@backcolor: #121212;
-@fontcolor: #f2f2f2;
-@altbackcolor: #f2f2f225;
-
 *
 {
   box-sizing: border-box;
@@ -27,7 +21,6 @@ body
 	color: #f2f2f2;
 	font-family: Helvetica;
 	max-width: 1920px;
-	margin: auto;
 	
 	animation: fadeIn 3s;
 }
@@ -42,7 +35,6 @@ a:link, a:visited, a:hover, a:active
 div
 {
 	display: flex;
-	margin: 0px;
 }
 
 input[type=submit] {
@@ -69,8 +61,8 @@ textarea
 
 .card
 {
-	margin: 5px;
-	border-radius: 20px;
+	justify-content: space-evenly;
+	border-radius: 0px;
 	height: 100vh;
 }
 
@@ -86,8 +78,8 @@ textarea
 {
 	border-radius: 100px;
 	max-width: 100%;
-	/*max-height: 90vh;*/
 	height: auto;
+	max-height: 90vh;
 	object-fit: cover;
 }
 
@@ -101,14 +93,6 @@ textarea
 	display: block;
 	padding: 10px;
 	padding-left: 0;
-}
-
-#Card1
-{
-	flex-direction: row;
-	justify-content: space-between;
-	margin: 5px;
-	border-radius: 100px;
 }
 
 @keyframes slideInFromLeft {
@@ -138,17 +122,7 @@ textarea
 
 #Card2, #Card4
 {
-	justify-content: space-between;
-	margin: 5px;
 	background-color: #f2f2f225;
-	border-radius: 20px;
-}
-
-#Card3
-{
-	justify-content: space-evenly;
-	margin: 5px;
-	border-radius: 100px;
 }
 
 #SobreMi
@@ -182,7 +156,7 @@ textarea
 
 
 /* ******************************** */
-/* BOTON BACK TO TOP y PROGRESS BAR */
+/*         BOTON BACK TO TOP        */
 /* ******************************** */
 
 .back-to-top {
@@ -207,9 +181,44 @@ textarea
 	color: #121212;
 }
 
+
+
+/* ******************************** */
+/*          BOTON NEXT CARD         */
+/* ******************************** */
+
+.next-card {
+	position: fixed;
+	bottom: 20px;
+	right: 120px;
+	z-index: 99;
+	border: none;
+	outline: none;
+	background-color: #121212;
+	color: #f2f2f2;
+	cursor: pointer;
+	padding: 15px;
+	border: 1px solid #f2f2f225;
+	border-radius: 20px;
+	opacity: 100%;
+	transition: opacity 0.5s;
+}
+
+.next-card:hover {
+	background-color: #f2f2f2;
+	color: #121212;
+}
+
 .hidden {
   opacity: 0%;
+  cursor: default;
 }
+
+
+
+/* ******************************** */
+/*           PROGRESS BAR           */
+/* ******************************** */
 
 .progress-bar {
   height: 5px;
@@ -278,5 +287,5 @@ textarea
 /* changing the color of the checkbox when it's toggled */
 
 #checkbox:checked{
-    background: rgb(12, 177, 81);
+    background: rgb(226, 147, 46);
 }

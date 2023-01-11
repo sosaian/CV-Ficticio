@@ -1,9 +1,12 @@
 /* KNOWN BUGS TO-DO LIST */
 
+//	goToTop const does not scroll completly to the top; I'll need to adjust HTML or find a more aggressive way to make it reach the top of the document.
+
 /* Back-to-Top button appears on load */
 
 const showOnPx = 100;
 const backToTopButton = document.querySelector(".back-to-top");
+const nextCardButton = document.querySelector(".next-card");
 const pageProgressBar = document.querySelector(".progress-bar");
 
 const scrollContainer = () => {
@@ -17,8 +20,9 @@ const goToTop = () => {
 };
 
 document.addEventListener("scroll", () => {
+  /* FOR DEBUGGING PURPUSES
   console.log("Scroll Height: ", scrollContainer().scrollHeight);
-  console.log("Client Height: ", scrollContainer().clientHeight);
+  console.log("Client Height: ", scrollContainer().clientHeight); */
 
   const scrolledPercentage =
     (scrollContainer().scrollTop /
@@ -29,8 +33,10 @@ document.addEventListener("scroll", () => {
 
   if (scrollContainer().scrollTop > showOnPx) {
     backToTopButton.classList.remove("hidden");
+    nextCardButton.classList.remove("hidden");
   } else {
     backToTopButton.classList.add("hidden");
+    nextCardButton.classList.add("hidden");
   }
 });
 
