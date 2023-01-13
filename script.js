@@ -6,8 +6,9 @@
 
 const showOnPx = 100;
 const backToTopButton = document.querySelector(".back-to-top");
-const nextCardButton = document.querySelector(".next-card");
 const pageProgressBar = document.querySelector(".progress-bar");
+
+const darkModeButton = document.querySelector(".toggleDarkMode");
 
 const scrollContainer = () => {
   return document.documentElement || document.body;
@@ -31,12 +32,17 @@ document.addEventListener("scroll", () => {
 
   pageProgressBar.style.width = `${scrolledPercentage}%`;
 
-  if (scrollContainer().scrollTop > showOnPx) {
+  if (scrollContainer().scrollTop > showOnPx)
+  {
     backToTopButton.classList.remove("hidden");
-    nextCardButton.classList.remove("hidden");
-  } else {
+	
+	darkModeButton.classList.add("hidden");
+  }
+  else
+  {
     backToTopButton.classList.add("hidden");
-    nextCardButton.classList.add("hidden");
+	
+	darkModeButton.classList.remove("hidden");
   }
 });
 
