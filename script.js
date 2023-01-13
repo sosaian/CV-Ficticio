@@ -1,30 +1,40 @@
-/* KNOWN BUGS TO-DO LIST */
+/* TO-DO LIST Bugs a arreglar */
 
-//	goToTop const does not scroll completly to the top; I'll need to adjust HTML or find a more aggressive way to make it reach the top of the document.
-
-/* Back-to-Top button appears on load */
+/* Los botones se esconden pero aún son activables... */
 
 const showOnPx = 100;
+
 const backToTopButton = document.querySelector(".back-to-top");
+
 const pageProgressBar = document.querySelector(".progress-bar");
 
 const darkModeButton = document.querySelector(".toggleDarkMode");
 
-const scrollContainer = () => {
-  return document.documentElement || document.body;
+const scrollContainer = () =>
+{
+	return document.documentElement || document.body;
 };
 
-const goToTop = () => {
-  document.body.scrollIntoView({
-    behavior: "smooth"
-  });
+const goToTop = () =>
+{
+	document.body.scrollIntoView(
+	{
+		behavior: "smooth"
+	});
 };
 
-document.addEventListener("scroll", () => {
-  /* FOR DEBUGGING PURPUSES
+document.addEventListener("scroll", () =>
+{
+  //PARA HACER DEBUGGING
+  
+  /*
+  
   console.log("Scroll Height: ", scrollContainer().scrollHeight);
-  console.log("Client Height: ", scrollContainer().clientHeight); */
-
+  
+  console.log("Client Height: ", scrollContainer().clientHeight);
+  
+  */
+  
   const scrolledPercentage =
     (scrollContainer().scrollTop /
       (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
@@ -48,24 +58,25 @@ document.addEventListener("scroll", () => {
 
 backToTopButton.addEventListener("click", goToTop);
 
-/*
-// Get the button
-let boton = document.getElementById("boton");
+darkModeButton.addEventListener("click", toggleTheme);
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    boton.style.display = "block";
-  } else {
-    boton.style.display = "none";
-  }
+
+
+function toggleTheme()
+{
+	// Obtiene un arreglo de todos los elementos <link>. Tener en cuenta seleccionar el elemento correcto usando el índice.
+	
+	var theme = document.getElementsByTagName('link')[1];
+
+	// Cambiando el valor del atributo href se alterna entre los distintos css.
+	
+	if (theme.getAttribute('href') == 'dark-theme.css')
+	{
+		theme.setAttribute('href', 'light-theme.css');
+	} 
+	else
+	{
+		theme.setAttribute('href', 'dark-theme.css');
+	}
 }
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-*/

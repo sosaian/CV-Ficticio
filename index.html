@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CV Ficticio</title>
 	<link rel="icon" type="image/x-icon" href="pinned-octocat.svg">
-	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<link id="dark-theme" rel="stylesheet" type="text/css" href="dark-theme.css" />
+	<!-- <link id="light-theme" rel="stylesheet" type="text/css" href="dark-theme.css" /> -->
 </head>
 <body>
 	
@@ -60,20 +61,12 @@
 				
 				<button class="siguiente" onclick="document.location='#Card3'">Sobre mí</button>
 			</div>
-			
-			<!--
-			<ul id="navBar2">
-				<li><a href="#Card3">Sobre mí</a></li>
-				
-				<li><a href="#Card4">| Contacto</a></li>
-			</ul>
-			-->			
 		</div>
 		
 		<!-- CARD 3 - SOBRE MI y CONTACTO -->
 		
 		<div class="card" id="Card3">
-			<div class="aux">
+			<div class="Card3Aux">
 				<div class="container" id="SobreMi">
 					<h2>Sobre mí</h2>
 					<p>Soy estudiante de Ingeniería en Informática, donde aprendí todo lo necesario para poder despempeñarme como una diseñadora web. Actualmente busco insertarme en el mundo laboral para poder poner en práctica todas las cosas que aprendí estos años.</p>
@@ -83,16 +76,16 @@
 					<ul style="list-style-type: square;">
 						<h2>Links relevantes</h2>
 						
-						<!--Portfolio on github; add icon-->
+						<!-- Portfolio en Github; agregar icono -->
 						<li>	<a href="https://github.com">Portfolio Github</a>	</li>
 						<br/>
-						<!--LinkedIn profile; add icon-->
+						<!-- perfil LinkedIn; agregar icono -->
 						<li>	<a href="https://linkedin.com">LinkedIn</a>	</li>
 						<br/>					
-						<!--Twitter profile; add icon-->
+						<!-- perfil Twitter; agregar icono -->
 						<li>	<a href="https://twitter.com">Twitter</a>	</li>
 						<br/>					
-						<!--Instagram profile; add icon-->
+						<!-- perfil Instagram; agregar icono -->
 						<li>	<a href="https://instagram.com">Instagram</a>	</li>
 					</ul>
 				</div>	
@@ -143,16 +136,12 @@
 		
 		<!-- PROGRESS BAR -->
 		
-		<div class="progress-bar" /></div>
+		<div class="progress-bar" />
 		
-		<!-- PRUEBA TOGGLE DARK MODE -->
+		<!-- TOGGLE DARK MODE -->
 		
-		<input class="toggleDarkMode" type="checkbox">
-		
-		<!-- PRUEBA BOTON NEXT CARD-->
-		
-		<!-- <button class="next-card hidden" onclick="document.location='#Card4'">Siguiente</button> -->
-		<!-- <a class="next-card hidden" href="#Card4">Siguiente</a> -->
+		<input class="toggleDarkMode" type="checkbox" id="Probando">
+	</div>
 	
 	<script type="text/javascript" src="script.js"></script>
 </body>

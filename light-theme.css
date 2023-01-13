@@ -1,0 +1,327 @@
+*
+{
+  box-sizing: border-box;
+}
+
+html
+{
+	scroll-behavior: smooth;
+}
+
+@keyframes fadeIn
+{
+	from {opacity: 0} to {opacity: 1}
+}
+
+body
+{
+	background-color: #f2f2f2;
+	color: #121212; 
+	font-family: Helvetica;
+	max-width: 1920px;
+	margin: 0px;
+	
+	animation: fadeIn 3s;
+}
+
+a:link, a:visited, a:hover, a:active
+{
+	color: #121212;
+	text-decoration: none;
+	style= "cursor:pointer";
+}
+
+div
+{
+	display: flex;
+}
+
+input[type=submit]
+{
+	background-color: #f2f2f2;
+	color: #121212;
+	border: 1px solid #121212;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+textarea
+{
+	min-height: 96px;
+	max-height: 306px;
+	resize: vertical;
+}
+
+.wrapper
+{
+	flex-direction: column;
+	overflow: auto;
+}
+
+.card
+{
+	justify-content: space-evenly;
+	border-radius: 0px;
+	height: 100vh;
+}
+
+.container
+{
+	flex-direction: column;
+	justify-content: center;
+	opacity: 100%;
+	transition: opacity 0.5s;
+}
+
+.foto
+{
+	border-radius: 100px;
+	max-width: 100%;
+	height: auto;
+	max-height: 90vh;
+	object-fit: cover;
+}
+
+.navBarLI
+{
+	float: left;
+}
+
+.navBarA
+{
+	display: block;
+	padding: 10px;
+	padding-left: 0;
+}
+
+.Card3Aux
+{
+	justify-content: space-evenly;
+	max-width: 75vw;
+}
+
+.siguiente
+{
+	border: none;
+	outline: none;
+	background-color: #f2f2f2;
+	color: #121212;
+	cursor: pointer;
+	padding: 15px;
+	border: 3px solid rgb(226, 147, 46);
+	border-radius: 20px;
+	opacity: 100%;
+	transition: opacity 0.5s;
+}
+
+.siguiente:hover
+{
+	background-color: #f2f2f2;
+	color: #121212;
+}
+
+@keyframes slideInFromLeft
+{
+  0%
+  {
+    transform: translateX(-100%);
+  }
+  
+  100%
+  {
+    transform: translateX(0);
+  }
+}
+
+#Card1Container
+{
+	flex-direction: column;
+	justify-content: center;
+	
+	animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+#navBar
+{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+#navBar2
+{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+#Card2, #Card4
+{
+	background-color: rgb(226, 147, 46);
+}
+
+#Card3
+{
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#SobreMi
+{
+	flex-direction: column;
+	justify-content: center;
+	margin: 10px;
+}
+
+#linksRelevantes
+{
+	flex-direction: column;
+	justify-content: center;
+	margin: 10px;
+}
+
+
+#Card4Container
+{
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#habilidades
+{
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 10px;
+}
+
+#MailTel
+{
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px;
+}
+
+
+
+/* ******************************** */
+/*         BOTON BACK-TO-TOP        */
+/* ******************************** */
+
+.back-to-top
+{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 99;
+	border: none;
+	outline: none;
+	background-color: #f2f2f2;
+	color: #121212;
+	cursor: pointer;
+	padding: 15px;
+	border: 3px solid rgb(226, 147, 46);
+	border-radius: 20px;
+	opacity: 100%;
+	transition: opacity 0.5s;
+}
+
+.back-to-top:hover
+{
+	background-color: #f2f2f2;
+	color: #121212;
+}
+
+
+
+/* ******************************** */
+/*           PROGRESS BAR           */
+/* ******************************** */
+
+.progress-bar
+{
+  height: 5px;
+  
+  /* Sé que hay parte del sitio donde no se va a ver esta barra, pero más importante me parece que es evitar darle más contraste del necesario */
+  
+  background-color: #f2f2f2;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+/* ******************************** */
+/*     BOTON TOGGLE TEMA OSCURO     */
+/* ******************************** */
+
+/* Formateando el checkbox per se */
+
+.toggleDarkMode
+{
+	position: fixed;
+    top: 20px;
+    right: 20px;
+    appearance: none;
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    -o-appearance : none;
+    width: 80px;
+    height: 40px;
+    background: black;
+    border-radius: 22px;
+    cursor: pointer;
+    outline: none;
+	opacity: 100%;
+	transition: opacity 0.5s;
+}
+
+/* Formateando el circulo dentro del checkbox */
+
+.toggleDarkMode::before
+{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    background-color: #f2f2f2;
+    border-radius: 35px;
+    top: 2px;
+    left: 2px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+/* Mover el circulo del checkbox cuando es activado por el usuario */
+
+.toggleDarkMode:checked::before
+{
+    left: 37px;
+}
+
+/* Cambio el color del checkbox al activarlo */
+
+.toggleDarkMode:checked
+{
+    background: rgb(226, 147, 46);
+}
+
+
+
+/* ******************************** */
+/*	         CLASS HIDDEN           */
+/* ******************************** */
+
+/* Intencionalmente al final para evitar repetir este código */
+
+.hidden
+{
+	opacity: 0%;
+	cursor: default;
+}
