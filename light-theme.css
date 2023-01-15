@@ -15,7 +15,7 @@ html
 
 body
 {
-	background-color: #f2f2f2;
+	background-color: rgb(220,215,210);
 	color: #121212; 
 	font-family: Helvetica;
 	max-width: 1920px;
@@ -36,14 +36,27 @@ div
 	display: flex;
 }
 
+label
+{
+	padding: 10px;
+}
+
+input
+{
+	border-radius: 15px;
+	border: 0px;
+	padding: 10px;
+	box-shadow: 3px 3px 3px 3px #12121225;
+}
+
 input[type=submit]
 {
 	background-color: #f2f2f2;
 	color: #121212;
-	border: 1px solid #121212;
-	border: none;
-	border-radius: 20px;
+	border: 1px solid #f2f2f225;
 	cursor: pointer;
+	
+	box-shadow: 3px 3px 3px 3px #12121225;
 }
 
 textarea
@@ -51,6 +64,11 @@ textarea
 	min-height: 96px;
 	max-height: 306px;
 	resize: vertical;
+	border: 0px;
+	border-radius: 15px;
+	padding: 10px;
+	
+	box-shadow: 3px 3px 3px 3px #12121225;
 }
 
 .wrapper
@@ -81,6 +99,8 @@ textarea
 	height: auto;
 	max-height: 90vh;
 	object-fit: cover;
+	
+	box-shadow: 3px 3px 3px 3px #12121225;
 }
 
 .navBarLI
@@ -109,16 +129,28 @@ textarea
 	color: #121212;
 	cursor: pointer;
 	padding: 15px;
-	border: 3px solid rgb(226, 147, 46);
+	/* border: 3px solid rgb(226, 147, 46); */
 	border-radius: 20px;
-	opacity: 100%;
-	transition: opacity 0.5s;
+	
+	box-shadow: 3px 3px 3px 3px #12121225;
+	transition: 0.5s;
 }
 
-.siguiente:hover
+.iconos
 {
-	background-color: #f2f2f2;
-	color: #121212;
+	height: 48px;
+	width: 48px;
+	margin-right: 20px;
+	vertical-align: middle;
+	
+	/* Este margen arregla un problema de alineacion vertical de los iconos de un proveedor específico */
+	
+	margin-bottom: 2px;
+}
+
+.aux
+{
+	margin-bottom: 0px;
 }
 
 @keyframes slideInFromLeft
@@ -158,9 +190,19 @@ textarea
 	overflow: hidden;
 }
 
-#Card2, #Card4
+#navBarB
 {
-	background-color: rgb(226, 147, 46);
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+	max-width: 100vh;
+}
+
+#Card2, #Card4
+{	
+	background-color: rgb(232, 161, 57);
 }
 
 #Card3
@@ -184,6 +226,12 @@ textarea
 	margin: 10px;
 }
 
+#linksRelevantesUl > li
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
 
 #Card4Container
 {
@@ -215,19 +263,21 @@ textarea
 .back-to-top
 {
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	z-index: 99;
+	bottom: 15px;
+	right: 15px;
+	/* z-index: 99; */
 	border: none;
 	outline: none;
 	background-color: #f2f2f2;
 	color: #121212;
 	cursor: pointer;
 	padding: 15px;
-	border: 3px solid rgb(226, 147, 46);
+	/* border: 3px solid rgb(226, 147, 46); */
 	border-radius: 20px;
 	opacity: 100%;
 	transition: opacity 0.5s;
+	
+	box-shadow: 3px 3px 3px 3px #12121225;
 }
 
 .back-to-top:hover
@@ -274,12 +324,14 @@ textarea
     -o-appearance : none;
     width: 80px;
     height: 40px;
-    background: black;
+    background: rgb(232, 161, 57);
     border-radius: 22px;
     cursor: pointer;
     outline: none;
 	opacity: 100%;
 	transition: opacity 0.5s;
+	
+	box-shadow: 3px 3px 3px 3px #12121225;
 }
 
 /* Formateando el circulo dentro del checkbox */
@@ -309,7 +361,7 @@ textarea
 
 .toggleDarkMode:checked
 {
-    background: rgb(226, 147, 46);
+    background: #121212;
 }
 
 

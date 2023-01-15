@@ -71,12 +71,12 @@ function toggleTheme()
 
 	// Cambiando el valor del atributo href se alterna entre los distintos css.
 	
-	if (theme.getAttribute('href') == 'dark-theme.css')
+	if (theme.getAttribute('href') == 'light-theme.css')
 	{
-		theme.setAttribute('href', 'light-theme.css');
+		theme.setAttribute('href', 'dark-theme.css');
 	} 
 	else
 	{
-		theme.setAttribute('href', 'dark-theme.css');
+		theme.setAttribute('href', 'light-theme.css');
 	}
 }

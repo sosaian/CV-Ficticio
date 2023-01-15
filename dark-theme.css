@@ -36,13 +36,26 @@ div
 	display: flex;
 }
 
+label
+{
+	padding: 10px;
+}
+
+input
+{
+	border-radius: 15px;
+	border: 0px;
+	padding: 10px;
+	box-shadow: 3px 3px 3px 3px #12121233;	
+}
+
 input[type=submit]
 {
 	background-color: #f2f2f2;
 	color: #121212;
 	border: 1px solid #f2f2f225;
-	border: none;
-	border-radius: 20px;
+	border-radius: 15px;
+	padding: 10px;
 	cursor: pointer;
 }
 
@@ -51,6 +64,11 @@ textarea
 	min-height: 96px;
 	max-height: 306px;
 	resize: vertical;
+	border: 0px;
+	border-radius: 15px;
+	padding: 10px;
+	
+	box-shadow: 3px 3px 3px 3px #12121233;
 }
 
 .wrapper
@@ -81,6 +99,8 @@ textarea
 	height: auto;
 	max-height: 90vh;
 	object-fit: cover;
+	
+	box-shadow: 3px 3px 3px 3px #12121233;
 }
 
 .navBarLI
@@ -105,20 +125,37 @@ textarea
 {
 	border: none;
 	outline: none;
-	background-color: #121212;
-	color: #f2f2f2;
+	background-color: #f2f2f2;
+	color: #121212;
 	cursor: pointer;
 	padding: 15px;
-	border: 3px solid #f2f2f225;
 	border-radius: 20px;
 	opacity: 100%;
 	transition: opacity 0.5s;
+	
+	box-shadow: 3px 3px 3px 3px #12121233;
 }
 
-.siguiente:hover
+.dark_theme
 {
-	background-color: #f2f2f2;
-	color: #121212;
+	filter: invert(100%);
+}
+
+.iconos
+{
+	height: 48px;
+	width: 48px;
+	margin-right: 20px;
+	vertical-align: middle;
+	
+	/* Este margen arregla un problema de alineacion vertical de los iconos de un proveedor específico */
+	
+	margin-bottom: 2px;
+}
+
+.aux
+{
+	margin-bottom: 0px;
 }
 
 @keyframes slideInFromLeft
@@ -160,7 +197,14 @@ textarea
 
 #Card2, #Card4
 {
-	background-color: #f2f2f225;
+	background-color: #f2f2f250;
+}
+
+#habilidades > li
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 #Card3
@@ -184,6 +228,12 @@ textarea
 	margin: 10px;
 }
 
+#linksRelevantesUl > li
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
 
 #Card4Container
 {
@@ -215,25 +265,27 @@ textarea
 .back-to-top
 {
 	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	z-index: 99;
+	bottom: 15px;
+	right: 15px;
+	/* z-index: 99; */
 	border: none;
 	outline: none;
-	background-color: #121212;
-	color: #f2f2f2;
+	background-color: #f2f2f2;
+	color: #121212;
 	cursor: pointer;
 	padding: 15px;
-	border: 3px solid #f2f2f225;
+	/* border: 3px solid #f2f2f225; */
 	border-radius: 20px;
 	opacity: 100%;
 	transition: opacity 0.5s;
+	
+	box-shadow: 3px 3px 3px 3px #12121233;
 }
 
 .back-to-top:hover
 {
-	background-color: #f2f2f2;
-	color: #121212;
+	background-color: #121212;
+	color: #f2f2f2;
 }
 
 
@@ -270,7 +322,7 @@ textarea
     -o-appearance : none;
     width: 80px;
     height: 40px;
-    background: #f2f2f225;
+    background: rgb(232, 161, 57);
     border-radius: 22px;
     cursor: pointer;
     outline: none;
@@ -306,7 +358,7 @@ textarea
 
 .toggleDarkMode:checked
 {
-    background: rgb(226, 147, 46);
+    background: #f2f2f225;
 }
 
 

@@ -5,9 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CV Ficticio</title>
-	<link rel="icon" type="image/x-icon" href="pinned-octocat.svg">
-	<link id="dark-theme" rel="stylesheet" type="text/css" href="dark-theme.css" />
-	<!-- <link id="light-theme" rel="stylesheet" type="text/css" href="dark-theme.css" /> -->
+	<link rel="icon" type="image/x-icon" href="img/pinned-octocat.svg">
+	<link id="light-theme" rel="stylesheet" type="text/css" href="light-theme.css" />
 </head>
 <body>
 	
@@ -23,17 +22,40 @@
 					<h2>Hola, soy Sofía, una programadora junior</h2>
 				</div>
 			
+				<!--
 				<ul id="navBar">
-					<li class="navBarLI"><a class="navBarA" href="#Card2">Habilidades</a></li>
+					<li class="navBarLI"><button class="siguiente" onclick="document.location='#Card2'">Habilidades</button></li>
 
-					<li class="navBarLI"><a class="navBarA" href="#Card3">| Sobre mí</a></li>
+					<li class="navBarLI"><button class="siguiente" onclick="document.location='#Card3'">Sobre mí</button></li>
 					
-					<li class="navBarLI"><a class="navBarA" href="#Card4">| Contacto</a></li>
+					<li class="navBarLI"><button class="siguiente" onclick="document.location='#Card4'">Contacto</button></li>
 				</ul>
+				<br/>
+				-->
+				
+				<!--
+				<div id="navBarB">
+					<button class="siguiente" onclick="document.location='#Card2'">Habilidades</button>
+					<br/>
+					<button class="siguiente" onclick="document.location='#Card3'">Sobre mí</button>
+					<br/>
+					<button class="siguiente" onclick="document.location='#Card4'">Contacto</button>
+				</div>
+				-->
+				
+				<button class="siguiente" onclick="document.location='#Card2'">Habilidades</button>
+				
+				<br/>
+				
+				<button class="siguiente" onclick="document.location='#Card3'">Sobre mí</button>
+				
+				<br/>
+				
+				<button class="siguiente" onclick="document.location='#Card4'">Contacto</button>
 			</div>
 
 			<div class="container" id="ContainerCard1Pic">
-				<img class="foto" id="Foto" src="girl.jpg" />
+				<img class="foto" id="Foto" src="img/girl.jpg" />
 			</div>
 		</div>
 		
@@ -41,21 +63,20 @@
 		
 		<div class="card" id="Card2">
 			<div class="container" id="Card2Pic">
-				<img class="foto" id="Foto2" src="girl 2.jpg" />
+				<img class="foto" id="Foto2" src="img/girl 2.jpg" />
 			</div>	
 			
 			<div class="container" id="habilidades">
-				<ul style="list-style-type: square;">
+				<ul style="list-style-type: none;">
 					<h2>Habilidades destacadas</h2>
 					<br/>
-					<!--Skills; add icon-->
-					<li>HTML5; CSS3; JavaScript avanzado</li>
+					<li><img src="img/web.svg" class="dark_theme iconos"/>HTML5; CSS3; JavaScript avanzado</li>
 					<br/>
-					<li>Inglés comprensión lectora avanzada; comunicación intermedia</li>
+					<li><img src="img/language.svg" class="dark_theme iconos"/>Inglés comprensión lectora avanzada; comunicación intermedia</li>
 					<br/>
-					<li>Comunación asertiva</li>
+					<li><img src="img/people.svg" class="dark_theme iconos"/>Comunación asertiva</li>
 					<br/>
-					<li>Manejo de proyectos</li>
+					<li><img src="img/chalkboard-teacher.svg" class="dark_theme iconos"/>Manejo de proyectos</li>
 				</ul>
 				
 				
@@ -71,22 +92,48 @@
 					<h2>Sobre mí</h2>
 					<p>Soy estudiante de Ingeniería en Informática, donde aprendí todo lo necesario para poder despempeñarme como una diseñadora web. Actualmente busco insertarme en el mundo laboral para poder poner en práctica todas las cosas que aprendí estos años.</p>
 				</div>
-
+				
 				<div class="container" id="linksRelevantes">
-					<ul style="list-style-type: square;">
+					<ul style="list-style-type: none;" id="linksRelevantesUl">
 						<h2>Links relevantes</h2>
 						
 						<!-- Portfolio en Github; agregar icono -->
-						<li>	<a href="https://github.com">Portfolio Github</a>	</li>
+						<li>
+							<img src="img/github.svg" class="dark_theme iconos"/>
+						
+							<a href="https://github.com">Portfolio Github</a>	</li>
 						<br/>
 						<!-- perfil LinkedIn; agregar icono -->
-						<li>	<a href="https://linkedin.com">LinkedIn</a>	</li>
+						<li>
+							<img src="img/linkedin.svg" class="dark_theme iconos"/>
+						
+							<a href="https://linkedin.com">LinkedIn</a>	</li>
 						<br/>					
 						<!-- perfil Twitter; agregar icono -->
-						<li>	<a href="https://twitter.com">Twitter</a>	</li>
+						<li>
+							<img src="img/twitter.svg" class="dark_theme iconos"/>
+						
+							<a href="https://twitter.com">Twitter</a>	</li>
 						<br/>					
 						<!-- perfil Instagram; agregar icono -->
-						<li>	<a href="https://instagram.com">Instagram</a>	</li>
+						<li>
+							<img src="img/instagram.svg" class="dark_theme iconos"/>
+							
+							<a href="https://instagram.com">Instagram</a>	</li>
+						<br/>
+						<!-- Email; agregar icono -->
+						<li>
+							<img src="img/envelope.svg" class="dark_theme iconos aux"/>
+							
+							<a href="mailto:mitchell.douglas@example.com">sofia.fernandez@ejemplo.com</a>
+						</li>
+						<br/>
+						<!-- Telefono; agregar icono -->
+						<li>
+							<img src="img/phone.svg" class="dark_theme iconos aux"/>
+							
+							<a href="img/tel:123-123-1234">(123) 123-1234</a>
+						</li>
 					</ul>
 				</div>	
 			</div>
@@ -101,9 +148,9 @@
 				<h2>Hablemos!</h2>
 
 				<form action="" method="post" name="formulario" >
-					<label>Nombre</label>
+					<label for="nombre">Nombre</label>
 					<br/>
-					<input type="text" name="nombre" placeholder="Ingrese su nombre">
+					<input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
 					<br/><br/>
 					<label>E-mail</label>
 					<br/>
@@ -117,16 +164,17 @@
 				</form>
 				
 				<br/>
-				
+				<!--
 				<div id="MailTel">
 					<a href="mailto:mitchell.douglas@example.com">sofia.fernandez@ejemplo.com</a>
 					<br/>
 					<a href="tel:123-123-1234">(123) 123-1234</a>
 				</div>
+				-->
 			</div>
 		
 			<div class="container" id="Card4Pic">
-				<img class="foto" id="Foto3" src="girl 3.jpg" />
+				<img class="foto" id="Foto3" src="img/girl 3.jpg" />
 			</div>		
 		</div>
 		
