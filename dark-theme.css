@@ -39,6 +39,9 @@ div
 label
 {
 	padding: 10px;
+	display: flex;
+	justify-content: flex-start;
+    width: 100%;
 }
 
 input
@@ -57,6 +60,7 @@ input[type=submit]
 	border-radius: 15px;
 	padding: 10px;
 	cursor: pointer;
+	width: 100%;
 }
 
 textarea
@@ -245,6 +249,15 @@ textarea
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	width: 40vw;
+}
+
+#Card4Container > form
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 #habilidades
@@ -378,4 +391,95 @@ textarea
 {
 	opacity: 0%;
 	cursor: default;
+}
+
+
+
+/* ******************************** */
+/*	         MEDIA QUERIES          */
+/* ******************************** */
+
+/* SMARTPHONES */
+@media only screen and (max-width: 767px)
+{
+	.card
+	{
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+	}
+	
+	#Card1, #Card4
+	{
+		flex-direction: column-reverse;
+		align-items: center;
+		height: 100vh;
+	}
+	
+	.foto
+	{
+		max-height: 40vh;
+		max-width: 90vw;
+	}
+	
+	.container
+	{
+		max-width: 90vw;
+		max-height: auto;
+	}
+	
+	#presentation
+	{
+		margin-bottom: 0px;
+	}
+	
+	.Card3Aux
+	{
+		flex-direction: column;
+	}
+	
+	#habilidades > ul
+	{
+		margin: 0px;
+	}
+	
+	#linksRelevantes
+	{
+		margin: 0px;
+	}
+	
+	#Card4Container > form
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	
+	label
+	{
+		justify-content: center;
+	}
+	
+	input, textarea
+	{
+		width: 90vw;
+	}
+	
+	input[type=submit]
+	{
+		margin-bottom: 10px;
+	}
+}
+
+
+/* TABLETS */
+@media only screen and (min-width: 768px) and (max-width: 1023px)
+{
+}
+
+
+/* DESKTOPS */
+@media only screen and (min-width: 1024px)
+{
 }
