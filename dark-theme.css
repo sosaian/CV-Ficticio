@@ -104,20 +104,8 @@ textarea
 	height: auto;
 	max-height: 90vh;
 	object-fit: cover;
-	
 	box-shadow: 3px 3px 3px 3px #12121233;
-}
-
-.navBarLI
-{
-	float: left;
-}
-
-.navBarA
-{
-	display: block;
-	padding: 10px;
-	padding-left: 0;
+	margin: 10px;
 }
 
 .Card3Aux
@@ -189,14 +177,6 @@ textarea
 	margin-bottom: 100px;
 }
 
-#navBar
-{
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-}
-
 #Card2, #Card4
 {
 	background-color: #f2f2f250;
@@ -248,6 +228,7 @@ textarea
 	align-items: center;
 	justify-content: center;
 	width: 40vw;
+	margin: 10px;
 }
 
 #Card4Container > form
@@ -265,13 +246,6 @@ textarea
 	justify-content: space-evenly;
 	align-items: center;
 	margin: 10px;
-}
-
-#MailTel
-{
-	flex-direction: column;
-	justify-content: center;
-	padding: 10px;
 }
 
 
@@ -293,15 +267,11 @@ textarea
 	padding: 15px;
 	border-radius: 20px;
 	opacity: 100%;
-	transition: opacity 0.5s;
-	
 	box-shadow: 3px 3px 3px 3px #12121233;
-}
-
-.back-to-top:hover
-{
-	background-color: #121212;
-	color: #f2f2f2;
+	
+	visibility: visible;
+	transition-delay: 0s;
+	transition: visibility 0s linear, opacity 0.5s linear;
 }
 
 
@@ -343,7 +313,12 @@ textarea
     cursor: pointer;
     outline: none;
 	opacity: 100%;
-	transition: opacity 0.5s;
+	
+	box-shadow: 3px 3px 3px 3px #12121225;
+	
+	visibility: visible;
+	transition-delay: 0s;
+	transition: visibility 0s linear, opacity 0.5s linear;
 }
 
 /* Formateando el circulo dentro del checkbox */
@@ -380,7 +355,7 @@ textarea
 
 
 /* ******************************** */
-/*	         CLASS HIDDEN           */
+/*	    CLASS HIDDEN Y DISABLE      */
 /* ******************************** */
 
 /* Intencionalmente al final para evitar repetir este código */
@@ -389,6 +364,12 @@ textarea
 {
 	opacity: 0%;
 	cursor: default;
+}
+
+.disable
+{
+	visibility: hidden;
+	transition: visibility 0s linear 0.5s,opacity 0.5s linear;
 }
 
 

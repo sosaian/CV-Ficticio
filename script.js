@@ -1,6 +1,6 @@
 /* TO-DO LIST Bugs a arreglar */
 
-/* Los botones se esconden pero aún son activables... */
+/* NADA... ¿ :D ? */
 
 const showOnPx = 100;
 
@@ -44,14 +44,23 @@ document.addEventListener("scroll", () =>
 
   if (scrollContainer().scrollTop > showOnPx)
   {
+    //Quitar estas clases hacen aparecer el botón Back-To-Top
+	backToTopButton.classList.remove("disable");
     backToTopButton.classList.remove("hidden");
 	
+	//Agregar estas clases hacen desaparecer el botón Toggle Dark Mode
 	darkModeButton.classList.add("hidden");
+	darkModeButton.classList.add("disable");
   }
   else
   {
-    backToTopButton.classList.add("hidden");
+    //Agregar estas clases hacen desaparecer el botón Back-To-Top
+	backToTopButton.classList.add("hidden");
+    backToTopButton.classList.add("disable");
 	
+	
+	//Quitar estas clases hacen aparecer el botón Toggle Darke Mode
+	darkModeButton.classList.remove("disable");
 	darkModeButton.classList.remove("hidden");
   }
 });
