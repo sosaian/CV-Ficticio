@@ -8,8 +8,8 @@
 html
 {
 	scroll-behavior: smooth;
-	height: 100%;
 	width: 100%;
+	height: 100%;
 	overflow: auto;
 }
 
@@ -18,7 +18,6 @@ body
 	background-color: rgb(220,215,210);	color: #121212; 
 	font-family: Helvetica;
 	margin: 0; 
-	height: 100%;
 	width: 100%;
 	animation: fadeIn 3s;
 	
@@ -51,11 +50,17 @@ form
 {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	height: auto;
 	width: 100%;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
+	
+	/* Este height genera problemas cada vez que la barra de dirección del navegador mobile aparece. Técnicamente lo que ocurre es que vh calcula la máxima altura posible, sin la barra de direcciones; ergo arruina el diseño responsive de la página cada vez que aparece esta barra dinámicamente. */
+	
+	height: 100vh;
+	
+	
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 
 .container
@@ -82,13 +87,13 @@ form
 	outline: none;
 	background-color: #f2f2f2;
 	color: #121212;
-	padding: 1em;
-	border-radius: 1em;
+	padding: 1rem;
+	border-radius: 1rem;
 	
-	width: 100%;
+	width: 50%;
 	max-width: 95vw;
 	
-	box-shadow: 0.1875em 0.1875em 0.1875em 0.1875em #12121225;
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121225;
 }
 
 a:link, a:visited, a:hover, a:active
@@ -100,18 +105,18 @@ a:link, a:visited, a:hover, a:active
 
 label
 {
-	padding: 1em;
+	padding: 1rem;
     display: flex;
 	justify-content: flex-start;
 }
 
 input
 {
-	border-radius: 1em;
-	border: 0em;
-	padding: 1em;
+	border-radius: 1rem;
+	border: 0;
+	padding: 1rem;
 	width: 100%;
-	box-shadow: 0.1875em 0.1875em 0.1875em 0.1875em #12121225;
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121225;
 }
 
 input[type=submit]
@@ -119,20 +124,20 @@ input[type=submit]
 	background-color: #f2f2f2;
 	color: #121212;
 	cursor: pointer;
-	width: 100%;
+	width: 50%;
 }
 
 textarea
 {
-	min-height: 6em;
-	max-height: 20em;
+	min-height: 6rem;
+	max-height: 20rem;
 	resize: vertical;
-	border: 0em;
-	border-radius: 1em;
-	padding: 1em;
+	border: 0;
+	border-radius: 1rem;
+	padding: 1rem;
 	width: 100%;
 	
-	box-shadow: 0.1875em 0.1875em 0.1875em 0.1875em #12121225;
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121225;
 }
 
 
@@ -140,24 +145,26 @@ textarea
 
 .foto
 {
-	max-height: 16em;
-	width: auto;
+	/* max-height: 16rem; */
+	/* width: auto; */
+	height: auto;
+	max-width: 50%;
 	object-fit: cover;
-	border-radius: 1em;
+	border-radius: 1rem;
 	
-	box-shadow: 0.1875em 0.1875em 0.1875em 0.1875em #12121225;
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121225;
 }
 
 .iconos
 {
-	height: 2em;
-	width: 2em;
-	margin-right: 1em;
+	height: 2rem;
+	width: 2rem;
+	margin-right: 1rem;
 	vertical-align: middle;
 	
 	/* Este margen arregla un problema de alineacion vertical de los iconos de un proveedor específico */
 	
-	margin-bottom: 0.125em;
+	margin-bottom: 0.125rem;
 }
 
 
@@ -197,17 +204,17 @@ textarea
 .back-to-top
 {
 	position: fixed;
-	bottom: 1em;
-	right: 1em;
+	bottom: 5rem;
+	right: 1rem;
 	border: none;
 	outline: none;
 	background-color: #f2f2f2;
 	color: #121212;
 	cursor: pointer;
-	padding: 1em;
-	border-radius: 1em;
+	padding: 1rem;
+	border-radius: 1rem;
 	opacity: 100%;
-	box-shadow: 0.1875em 0.1875em 0.1875em 0.1875em #12121225;
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121225;
 	
 	visibility: visible;
 	transition-delay: 0s;
@@ -222,7 +229,7 @@ textarea
 
 .progress-bar
 {
-  height: 0.3125em;
+  height: 0.3125rem;
   
   /* Sé que hay parte del sitio donde no se va a ver esta barra, pero más importante me parece que es evitar darle más contraste del necesario */
   
@@ -244,21 +251,21 @@ textarea
 .toggleDarkMode
 {
 	position: fixed;
-    top: 1.25em;
-    right: 1.25em;
+    top: 1.25rem;
+    right: 1.25rem;
     appearance: none;
     /* -webkit-appearance : none; */
     /* -moz-appearance : none; */
     /* -o-appearance : none; */
-    width: 5em;
-    height: 2.5em;
+    width: 5rem;
+    height: 2.5rem;
     background: rgb(232, 161, 57);
-    border-radius: 1.375em;
+    border-radius: 1.375rem;
     cursor: pointer;
     outline: none;
 	opacity: 100%;
 	
-	box-shadow: 0.1875em 0.1875em 0.1875em 0.1875em #12121225;
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121225;
 	
 	visibility: visible;
 	transition-delay: 0s;
@@ -271,12 +278,12 @@ textarea
 {
     content: '';
     position: absolute;
-    width: 2.5em;
-    height: 2.1875em;
+    width: 2.5rem;
+    height: 2.1875rem;
     background-color: #f2f2f2;
-    border-radius: 2.1875em;
-    top: 0.125em;
-    left: 0.125em;
+    border-radius: 2.1875rem;
+    top: 0.125rem;
+    left: 0.125rem;
     cursor: pointer;
     transition: .3s linear;
 }
@@ -285,7 +292,7 @@ textarea
 
 .toggleDarkMode:checked::before
 {
-    left: 2.3125em;
+    left: 2.3125rem;
 }
 
 /* Cambio el color del checkbox al activarlo */
@@ -313,4 +320,33 @@ textarea
 {
 	visibility: hidden;
 	transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+}
+
+
+
+/* ******************************** */
+/*	         MEDIA QUERIES          */
+/* ******************************** */
+
+/* SMARTPHONES */
+@media only screen and (max-width: 767px)
+{
+	h1, h2, p
+	{
+		text-align: center;
+	}
+	
+	ul > h2
+	{
+		text-align: center;
+	}
+	
+	
+	/* || BOTON BACK-TO-TOP */
+	.back-to-top
+	{
+		/* Con esto parcheo los problemas generados con tener 'height: 100vh' en .card*/
+		
+		bottom: 5rem;
+	}
 }
