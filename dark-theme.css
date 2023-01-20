@@ -1,27 +1,95 @@
+/* || SITEWIDE */
+
 *
 {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html
 {
 	scroll-behavior: smooth;
-}
-
-@keyframes fadeIn
-{
-	from {opacity: 0} to {opacity: 1}
+	height: 100%;
+	width: 100%;
+	overflow: auto;
 }
 
 body
 {
 	background-color: #121212;
-	color: #f2f2f2;
+	color: #f2f2f2; 
 	font-family: Helvetica;
-	max-width: 1920px;
-	margin: 0px;
-	
+	margin: 0;
+	height: 100%;
+	width: 100%;
 	animation: fadeIn 3s;
+	
+	display: flex;
+}
+
+ul
+{
+	padding: 0;
+	margin: 0;
+}
+
+form
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 95vw;
+}
+
+.wrapper
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: auto;
+	width: 100%;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.container
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 95%;
+}
+
+#Card2, #Card4
+{
+	background-color: #f2f2f250;
+}
+
+
+/* || TYPOGRAPHY */
+
+.siguiente
+{
+	border: none;
+	outline: none;
+	background-color: #f2f2f2;
+	color: #121212;
+	padding: 1em;
+	border-radius: 1em;
+	
+	width: 100%;
+	max-width: 95vw;
+	
+	box-shadow: 0.1875em 0.1875em 0.1875em 0.1875em #12121233;
 }
 
 a:link, a:visited, a:hover, a:active
@@ -31,102 +99,54 @@ a:link, a:visited, a:hover, a:active
 	style= "cursor:pointer";
 }
 
-div
-{
-	display: flex;
-}
-
 label
 {
-	padding: 10px;
-	display: flex;
+	padding: 1em;
+    display: flex;
 	justify-content: flex-start;
-    width: 100%;
 }
 
 input
 {
-	border-radius: 15px;
-	border: 0px;
-	padding: 10px;
+	border-radius: 1em;
+	border: 0em;
+	padding: 1em;
 	width: 100%;
-	box-shadow: 3px 3px 3px 3px #12121233;	
+	box-shadow: 0.1875em 0.1875em 0.1875em 0.1875em #12121233;
 }
 
 input[type=submit]
 {
 	background-color: #f2f2f2;
 	color: #121212;
-	border: 1px solid #f2f2f225;
-	border-radius: 15px;
 	cursor: pointer;
 	width: 100%;
 }
 
 textarea
 {
-	min-height: 96px;
-	max-height: 306px;
+	min-height: 6em;
+	max-height: 20em;
 	resize: vertical;
-	border: 0px;
-	border-radius: 15px;
-	padding: 10px;
+	border: 0em;
+	border-radius: 1em;
+	padding: 1em;
 	width: 100%;
 	
-	box-shadow: 3px 3px 3px 3px #12121233;
+	box-shadow: 0.1875em 0.1875em 0.1875em 0.1875em #12121233;
 }
 
-.wrapper
-{
-	flex-direction: column;
-	overflow: auto;
-}
 
-.card
-{
-	justify-content: space-evenly;
-	border-radius: 0px;
-	height: 100vh;
-}
-
-.container
-{
-	flex-direction: column;
-	justify-content: center;
-	opacity: 100%;
-	transition: opacity 0.5s;
-}
+/* || IMAGES */
 
 .foto
 {
-	border-radius: 100px;
-	max-width: 100%;
-	height: auto;
-	max-height: 90vh;
+	max-height: 16em;
+	width: auto;
 	object-fit: cover;
-	box-shadow: 3px 3px 3px 3px #12121233;
-	margin: 10px;
-}
-
-.Card3Aux
-{
-	justify-content: space-evenly;
-	max-width: 75vw;
-}
-
-.siguiente
-{
-	border: none;
-	outline: none;
-	background-color: #f2f2f2;
-	color: #121212;
-	cursor: pointer;
-	padding: 15px;
-	border-radius: 20px;
-	opacity: 100%;
-	transition: opacity 0.5s;
+	border-radius: 1em;
 	
-	box-shadow: 3px 3px 3px 3px #12121233;
+	box-shadow: 0.1875em 0.1875em 0.1875em 0.1875em #12121233;
 }
 
 .dark_theme
@@ -136,20 +156,28 @@ textarea
 
 .iconos
 {
-	height: 48px;
-	width: 48px;
-	margin-right: 20px;
+	height: 2em;
+	width: 2em;
+	margin-right: 1em;
 	vertical-align: middle;
 	
 	/* Este margen arregla un problema de alineacion vertical de los iconos de un proveedor específico */
 	
-	margin-bottom: 2px;
+	margin-bottom: 0.125em;
 }
 
-.aux
+
+/* || ANMIATIONS AND TRANSITIONS */
+
+/* Fade-in animation */
+
+@keyframes fadeIn
 {
-	margin-bottom: 0px;
+	from {opacity: 0} to {opacity: 1}
 }
+
+
+/* Slide-in from left animation */
 
 @keyframes slideInFromLeft
 {
@@ -164,90 +192,8 @@ textarea
   }
 }
 
-#Card1Container
-{
-	flex-direction: column;
-	justify-content: center;
-	
-	animation: 1s ease-out 0s 1 slideInFromLeft;
-}
 
-#presentation
-{
-	margin-bottom: 100px;
-}
-
-#Card2, #Card4
-{
-	background-color: #f2f2f250;
-}
-
-#habilidades > li
-{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-#Card3
-{
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-}
-
-#SobreMi
-{
-	flex-direction: column;
-	justify-content: center;
-	margin: 10px;
-}
-
-#linksRelevantes
-{
-	flex-direction: column;
-	justify-content: center;
-	margin: 10px;
-}
-
-#linksRelevantesUl > li
-{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-#Card3Siguiente
-{
-	width: 75vw;
-}
-
-#Card4Container
-{
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 40vw;
-	margin: 10px;
-}
-
-#Card4Container > form
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-}
-
-#habilidades
-{
-	flex-direction: column;
-	justify-content: space-evenly;
-	align-items: center;
-	margin: 10px;
-}
-
+/* || EXTRA FEATURES */
 
 
 /* ******************************** */
@@ -257,17 +203,17 @@ textarea
 .back-to-top
 {
 	position: fixed;
-	bottom: 15px;
-	right: 15px;
+	bottom: 1em;
+	right: 1em;
 	border: none;
 	outline: none;
 	background-color: #f2f2f2;
 	color: #121212;
 	cursor: pointer;
-	padding: 15px;
-	border-radius: 20px;
+	padding: 1em;
+	border-radius: 1em;
 	opacity: 100%;
-	box-shadow: 3px 3px 3px 3px #12121233;
+	box-shadow: 0.1875em 0.1875em 0.1875em 0.1875em #12121233;
 	
 	visibility: visible;
 	transition-delay: 0s;
@@ -282,7 +228,7 @@ textarea
 
 .progress-bar
 {
-  height: 5px;
+  height: 0.3125em;
   background-color: #f2f2f2;
   position: fixed;
   top: 0;
@@ -300,21 +246,21 @@ textarea
 .toggleDarkMode
 {
 	position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 1.25em;
+    right: 1.25em;
     appearance: none;
-    -webkit-appearance : none;
-    -moz-appearance : none;
-    -o-appearance : none;
-    width: 80px;
-    height: 40px;
+    /* -webkit-appearance : none; */
+    /* -moz-appearance : none; */
+    /* -o-appearance : none; */
+    width: 5em;
+    height: 2.5em;
     background: rgb(232, 161, 57);
-    border-radius: 22px;
+    border-radius: 1.375em;
     cursor: pointer;
     outline: none;
 	opacity: 100%;
 	
-	box-shadow: 3px 3px 3px 3px #12121225;
+	box-shadow: 0.1875em 0.1875em 0.1875em 0.1875em #12121233;
 	
 	visibility: visible;
 	transition-delay: 0s;
@@ -327,12 +273,12 @@ textarea
 {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 35px;
+    width: 2.5em;
+    height: 2.1875em;
     background-color: #f2f2f2;
-    border-radius: 35px;
-    top: 2px;
-    left: 2px;
+    border-radius: 2.1875em;
+    top: 0.125em;
+    left: 0.125em;
     cursor: pointer;
     transition: .3s linear;
 }
@@ -341,7 +287,7 @@ textarea
 
 .toggleDarkMode:checked::before
 {
-    left: 37px;
+    left: 2.3125em;
 }
 
 
@@ -370,124 +316,4 @@ textarea
 {
 	visibility: hidden;
 	transition: visibility 0s linear 0.5s,opacity 0.5s linear;
-}
-
-
-
-/* ******************************** */
-/*	         MEDIA QUERIES          */
-/* ******************************** */
-
-/* SMARTPHONES */
-@media only screen and (max-width: 767px)
-{
-	.card
-	{
-		flex-direction: column;
-		align-items: center;
-		height: 100vh;
-	}
-	
-	#Card1, #Card4
-	{
-		flex-direction: column-reverse;
-		align-items: center;
-		height: 100vh;
-	}
-	
-	.foto
-	{
-		max-height: 40vh;
-		max-width: 90vw;
-	}
-	
-	.container
-	{
-		max-width: 90vw;
-		max-height: auto;
-	}
-	
-	#presentation
-	{
-		margin-bottom: 0px;
-	}
-	
-	.Card3Aux
-	{
-		flex-direction: column;
-	}
-	
-	#habilidades > ul
-	{
-		margin: 0px;
-	}
-	
-	#linksRelevantes
-	{
-		margin: 0px;
-	}
-	
-	#Card4Container > form
-	{
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-	}
-	
-	label
-	{
-		justify-content: center;
-	}
-	
-	input, textarea
-	{
-		width: 90vw;
-	}
-	
-	input[type=submit]
-	{
-		margin-bottom: 0px;
-		width: 45vw;
-		padding: 15px;
-		border: 0px;
-	}
-	
-	ul
-	{
-		margin: 0px;
-		padding-left: 0px;
-		
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: center;
-	}
-	
-	.Card3Aux
-	{
-		max-width: 90vw;
-	}
-	
-	.iconos
-	{
-		height: 32px;
-		width: 32px;
-	}
-	
-	#card2Siguiente, #card3Siguiente
-	{
-		width: 45vw;
-	}
-
-/* TABLETS */
-@media only screen and (min-width: 768px) and (max-width: 1023px)
-{
-}
-
-
-/* DESKTOPS */
-@media only screen and (min-width: 1024px)
-{
-	/* Tecnicamente no debería ser necesario... inicialmente lo organicé para una desktop */
 }
