@@ -1,6 +1,8 @@
-/* TO-DO LIST Bugs a arreglar */
+/* TO-DO LIST & Bugs a arreglar */
 
-/* NADA... ¿ :D ? */
+/* input[type=submit] que genere un modal avisando que es falso! */
+
+/* organizar media-queries para smartphones y de ahí crear laptops (igual que tablets) y desktops (tener en cuenta widescreens/alto DPI) */
 
 const showOnPx = 100;
 

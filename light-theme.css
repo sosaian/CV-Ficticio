@@ -1,4 +1,12 @@
-/* || SITEWIDE */
+/* ******************************** */
+/*            || SITEWIDE           */
+/* ******************************** */
+
+/* 
+Organizo estos archivos css guiándome de este articulo de MDN 
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+*/
 
 *
 {
@@ -8,26 +16,21 @@
 html
 {
 	scroll-behavior: smooth;
-	width: 100%;
-	height: 100%;
 	overflow: auto;
+	font-size: 2vh;
 }
 
 body
 {
-	background-color: rgb(220,215,210);	color: #121212; 
+	background-color: rgb(220,215,210);
+	color: #121212; 
 	font-family: Helvetica;
 	margin: 0; 
 	width: 100%;
+	height: 100%;
 	animation: fadeIn 3s;
 	
 	display: flex;
-}
-
-ul
-{
-	padding: 0;
-	margin: 0;
 }
 
 form
@@ -50,7 +53,7 @@ form
 {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	width: 100%;
 	
@@ -58,9 +61,15 @@ form
 	
 	height: 100vh;
 	
+	/* Para solucionar ese problema decidí diseñar la página con padding-bottom para ajustar todos los container a la misma parte visible en cada card, adrede. */
 	
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	padding-top: 0rem;
+	padding-bottom: 3rem;
+}
+
+#Card4Pic
+{
+	max-height: 25%;
 }
 
 .container
@@ -69,8 +78,8 @@ form
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
-	max-width: 95%;
+	width: 95%;
+	overflow: hidden;
 }
 
 #Card2, #Card4
@@ -79,7 +88,15 @@ form
 }
 
 
-/* || TYPOGRAPHY */
+/* ******************************** */
+/*          || TYPOGRAPHY           */
+/* ******************************** */
+
+h1, h2, p, ul, li
+{
+	padding: 0;
+	margin: 1rem;
+}
 
 .siguiente
 {
@@ -88,6 +105,7 @@ form
 	background-color: #f2f2f2;
 	color: #121212;
 	padding: 1rem;
+	margin: 1rem;
 	border-radius: 1rem;
 	
 	width: 50%;
@@ -101,6 +119,11 @@ a:link, a:visited, a:hover, a:active
 	color: #121212;
 	text-decoration: none;
 	style= "cursor:pointer";
+}
+
+ul > h2
+{
+	margin: 1rem;
 }
 
 label
@@ -125,6 +148,7 @@ input[type=submit]
 	color: #121212;
 	cursor: pointer;
 	width: 50%;
+	margin: 1rem;
 }
 
 textarea
@@ -135,24 +159,25 @@ textarea
 	border: 0;
 	border-radius: 1rem;
 	padding: 1rem;
+	margin-bottom: 16px;
 	width: 100%;
-	
 	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121225;
 }
 
 
-/* || IMAGES */
+/* ******************************** */
+/*            || IMAGES             */
+/* ******************************** */
 
 .foto
 {
-	/* max-height: 16rem; */
-	/* width: auto; */
-	height: auto;
-	max-width: 50%;
+	width: 100%;
+	max-width: 100%;
+	max-height: 40vh;
 	object-fit: cover;
-	border-radius: 1rem;
-	
-	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121225;
+	border-radius: 1rem;	
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121233;	
+	overflow: hidden;
 }
 
 .iconos
@@ -168,7 +193,9 @@ textarea
 }
 
 
-/* || ANMIATIONS AND TRANSITIONS */
+/* ******************************** */
+/*   || ANMIATIONS AND TRANSITIONS  */
+/* ******************************** */
 
 /* Fade-in animation */
 
@@ -194,18 +221,18 @@ textarea
 }
 
 
-/* || EXTRA FEATURES */
-
-
 /* ******************************** */
-/*         BOTON BACK-TO-TOP        */
+/*         || EXTRA FEATURES        */
 /* ******************************** */
+
+/* || BOTON BACK-TO-TOP */
+
 
 .back-to-top
 {
 	position: fixed;
-	bottom: 5rem;
-	right: 1rem;
+    top: 1.25rem;
+    right: 1.25rem;
 	border: none;
 	outline: none;
 	background-color: #f2f2f2;
@@ -215,36 +242,27 @@ textarea
 	border-radius: 1rem;
 	opacity: 100%;
 	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121225;
-	
 	visibility: visible;
 	transition-delay: 0s;
 	transition: visibility 0s linear, opacity 0.5s linear;
 }
 
 
+/* || PROGRESS BAR */
 
-/* ******************************** */
-/*           PROGRESS BAR           */
-/* ******************************** */
 
 .progress-bar
 {
-  height: 0.3125rem;
-  
-  /* Sé que hay parte del sitio donde no se va a ver esta barra, pero más importante me parece que es evitar darle más contraste del necesario */
-  
-  background-color: #f2f2f2;
-  
+  height: 0.3125rem;  
+  background-color: #12121288;
   position: fixed;
   top: 0;
   left: 0;
 }
 
 
+/* || BOTON TOGGLE TEMA OSCURO */
 
-/* ******************************** */
-/*     BOTON TOGGLE TEMA OSCURO     */
-/* ******************************** */
 
 /* Formateando el checkbox per se */
 
@@ -253,10 +271,10 @@ textarea
 	position: fixed;
     top: 1.25rem;
     right: 1.25rem;
+	
+	margin: 0; /* para sobreescribir stylesheets del useragent */
+	
     appearance: none;
-    /* -webkit-appearance : none; */
-    /* -moz-appearance : none; */
-    /* -o-appearance : none; */
     width: 5rem;
     height: 2.5rem;
     background: rgb(232, 161, 57);
@@ -303,12 +321,9 @@ textarea
 }
 
 
+/* || CLASS HIDDEN Y DISABLE */
 
-/* ******************************** */
-/*	    CLASS HIDDEN Y DISABLE      */
-/* ******************************** */
-
-/* Intencionalmente al final para evitar repetir este código */
+/* (Usado para alternar los botones toggle tema oscuro y back-to-top) */
 
 .hidden
 {
@@ -325,10 +340,10 @@ textarea
 
 
 /* ******************************** */
-/*	         MEDIA QUERIES          */
+/*	      || MEDIA QUERIES          */
 /* ******************************** */
 
-/* SMARTPHONES */
+/* || SMARTPHONES */
 @media only screen and (max-width: 767px)
 {
 	h1, h2, p
@@ -339,14 +354,5 @@ textarea
 	ul > h2
 	{
 		text-align: center;
-	}
-	
-	
-	/* || BOTON BACK-TO-TOP */
-	.back-to-top
-	{
-		/* Con esto parcheo los problemas generados con tener 'height: 100vh' en .card*/
-		
-		bottom: 5rem;
 	}
 }

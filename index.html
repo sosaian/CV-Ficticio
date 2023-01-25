@@ -13,31 +13,28 @@
 	
 	<link id="light-theme" rel="stylesheet" type="text/css" href="light-theme.css" />
 </head>
-<body>
-	
-	<!-- Wrapper/Envoltorio para estructurar la base de la página como una caja grande -->
-	
+<body>	
 	<div class="wrapper" id="Wrapper">
 	
 		<!-- CARD 1 - PRESENTACION -->
 		
 		<div class="card" id="Card1">
 			<div class="container" id="ContainerCard1Pic">
+			
 				<img class="foto" id="Foto" src="img/girl.jpg" />
+				
 			</div>
 			
 			<div class="container" id="Card1Container">			
 				<div class="containter" id="presentation">
+				
 					<h1>Hola, soy Sofía, una programadora junior</h1>
+					
 				</div>
 				
 				<button class="siguiente" onclick="document.location='#Card2'">Habilidades</button>
 				
-				<br/>
-				
 				<button class="siguiente" onclick="document.location='#Card3'">Sobre mí</button>
-				
-				<br/>
 				
 				<button class="siguiente" onclick="document.location='#Card4'">Contacto</button>
 			</div>
@@ -53,21 +50,18 @@
 			<div class="container" id="habilidades">
 				<ul style="list-style-type: none;">
 					<h2>Habilidades destacadas</h2>
-					<br/>
+
 					<li><img src="img/web.svg" class="dark_theme iconos"/>HTML5; CSS3; JavaScript avanzado</li>
-					<br/>
+
 					<li><img src="img/language.svg" class="dark_theme iconos"/>INGLÉS:  comprensión lectora avanzada; comunicación intermedia</li>
-					<br/>
+
 					<li><img src="img/people.svg" class="dark_theme iconos"/>Comunación asertiva</li>
-					<br/>
+
 					<li><img src="img/chalkboard-teacher.svg" class="dark_theme iconos"/>Manejo de proyectos</li>
 				</ul>
 				
-				<br/>
-				
 				<button class="siguiente" onclick="document.location='#Card3'" id="card2Siguiente">Sobre mí</button>
 			</div>
-			<!-- <div class="container"></div> -->
 		</div>
 		
 		<!-- CARD 3 - SOBRE MI y CONTACTO -->
@@ -88,32 +82,27 @@
 						<img src="img/github.svg" class="dark_theme iconos"/>
 					
 						<a href="https://github.com">Portfolio Github</a>	</li>
-					<br/>
 					<!-- perfil LinkedIn -->
 					<li>
 						<img src="img/linkedin.svg" class="dark_theme iconos"/>
 					
-						<a href="https://linkedin.com">LinkedIn</a>	</li>
-					<br/>					
+						<a href="https://linkedin.com">LinkedIn</a>	</li>					
 					<!-- perfil Twitter -->
 					<li>
 						<img src="img/twitter.svg" class="dark_theme iconos"/>
 					
-						<a href="https://twitter.com">Twitter</a>	</li>
-					<br/>					
+						<a href="https://twitter.com">Twitter</a>	</li>				
 					<!-- perfil Instagram -->
 					<li>
 						<img src="img/instagram.svg" class="dark_theme iconos"/>
 						
 						<a href="https://instagram.com">Instagram</a>	</li>
-					<br/>
 					<!-- Email -->
 					<li>
 						<img src="img/envelope.svg" class="dark_theme iconos aux"/>
 						
 						<a href="mailto:mitchell.douglas@example.com">sofia.fernandez@ejemplo.com</a>
 					</li>
-					<br/>
 					<!-- Telefono -->
 					<li>
 						<img src="img/phone.svg" class="dark_theme iconos aux"/>
@@ -122,8 +111,6 @@
 					</li>
 				</ul>
 			</div>
-			
-			<br/>
 			
 			<button class="siguiente" onclick="document.location='#Card4'" id="card3Siguiente">Contacto</button>
 		</div>
@@ -150,7 +137,7 @@
 					<label>Mensaje</label>
 
 					<textarea name="mensaje" placeholder="Ingrese su mensaje"></textarea>
-					<br/><br/>
+
 					<input name="enviar" type="submit" value="Enviar">
 				</form>
 			</div>	
