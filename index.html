@@ -138,8 +138,11 @@
 
 					<textarea name="mensaje" placeholder="Ingrese su mensaje"></textarea>
 
-					<input name="enviar" type="submit" value="Enviar">
+					<!-- <input name="enviar" type="submit" value="Enviar"> -->
 				</form>
+				
+				<!-- Use a button to open the snackbar -->
+				<button class="siguiente" onclick="snackbar()">Enviar</button>
 			</div>	
 		</div>
 		
@@ -154,6 +157,9 @@
 		<!-- TOGGLE DARK MODE -->
 		
 		<input class="toggleDarkMode" type="checkbox" id="Probando">
+		
+		<!-- SNACKBAR / TOAST -->
+		<div id="snackbar">Este formulario es ficticio...</div>
 	</div>
 	
 	<script type="text/javascript" src="script.js"></script>
