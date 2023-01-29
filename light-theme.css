@@ -247,7 +247,7 @@ textarea
 	transition: visibility 0s linear, opacity 0.5s linear;
 	
 	/* Add a z-index if needed */
-	z-index: 1;
+	z-index: 2;
 }
 
 
@@ -346,17 +346,15 @@ textarea
 
 /* || SNACKBAR */
 
-/* The snackbar - position it at the bottom and in the middle of the screen */
+/* El snackbar - ubicado en el inferior de la pantalla y centrado. */
 
-#snackbar
+#formSnackbar
 {
-	/* Hidden by default. Visible on click */
+	/* Oculto por default. Visible al clickear */
 	visibility: hidden;
-
-	/* Set a default minimum width */
 	min-width: 20rem;
 
-	/* Aligning the div with an dynamic/undefined width */
+	/* Alineando el div con un ancho dinamico/indefinido */
 	position: fixed;
 	left: 50%;
 	transform: translate(-50%);
@@ -367,49 +365,50 @@ textarea
 	border-radius: 1rem;
 	padding: 1rem;
 
-	/* Add a z-index if needed */
+	/* Agrego un z-index por si es necesario */
 	z-index: 1;
 
-	/* 3rem from the bottom */
+	/* 3rem desde el inferior */
 	bottom: 6rem;
 }
 
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
-#snackbar.show
+/* Muestro el snackbar cuando clickeo el boton (agrego una clase con JavaScript) */
+
+#formSnackbar.show
 {
-  visibility: visible;
-  
-  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-  However, delay the fade out process for 2.5 seconds */
-  
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	visibility: visible;
+
+	/* Agrego animaciones; 0.5 para que el snackbar haga fadein y fadeout.
+	ademas agrego un delay de 2.5 segundos para el fadeout */
+
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-/* Animations to fade the snackbar in and out */
+/* Animaciones para que el snackbar tenga un fadein y fadeout */
 
 @-webkit-keyframes fadein
 {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 6rem; opacity: 1;}
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 6rem; opacity: 1;}
 }
 
 @keyframes fadein
 {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 6rem; opacity: 1;}
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 6rem; opacity: 1;}
 }
 
 @-webkit-keyframes fadeout
 {
-  from {bottom: 6rem; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+	from {bottom: 6rem; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
 }
 
 @keyframes fadeout
 {
-  from {bottom: 6rem; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+	from {bottom: 6rem; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
 }
 
 

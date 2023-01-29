@@ -92,13 +92,13 @@ function toggleTheme()
 	}
 }
 
-function snackbar() {
-  // Get the snackbar DIV
-  var x = document.getElementById("snackbar");
+function formSnackbar() {
+  // Get the form snackbar DIV
+  var snackbar = document.getElementById("formSnackbar");
 
   // Add the "show" class to DIV
-  x.className = "show";
+  snackbar.className = "show";
 
   // After 3 seconds, remove the show class from DIV
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
 }
