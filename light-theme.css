@@ -107,6 +107,7 @@ h1, h2, p, ul, li
 	padding: 1rem;
 	margin: 1rem;
 	border-radius: 1rem;
+	cursor: pointer;
 	
 	width: 50%;
 	max-width: 95vw;
@@ -135,6 +136,7 @@ label
 
 input
 {
+	font-family: Helvetica;
 	border-radius: 1rem;
 	border: 0;
 	padding: 1rem;
@@ -153,6 +155,7 @@ input[type=submit]
 
 textarea
 {
+	font-family: Helvetica;
 	min-height: 6rem;
 	max-height: 20rem;
 	resize: vertical;
@@ -245,6 +248,7 @@ textarea
 	visibility: visible;
 	transition-delay: 0s;
 	transition: visibility 0s linear, opacity 0.5s linear;
+	font-size: 1rem;
 	
 	/* Add a z-index if needed */
 	z-index: 2;
@@ -417,8 +421,10 @@ textarea
 /*	      || MEDIA QUERIES          */
 /* ******************************** */
 
-/* || SMARTPHONES */
-@media only screen and (max-width: 767px)
+/* Para evitar perder más tiempo armando a mano cada estilo, segmento en dos media queries principales: mobile + tablet, y laptop + desktop. */
+
+/* || SMARTPHONES *//* max-width: 767px */
+@media only screen and (max-width: 1023px)
 {
 	h1, h2, p
 	{
@@ -428,5 +434,106 @@ textarea
 	ul > h2
 	{
 		text-align: center;
+	}
+}
+
+/* || LAPTOPS *//* min-width: 768px */
+@media only screen and (min-width: 1024px)
+{
+	html
+	{
+		font-size: 2.5vh;
+	}
+	
+	h1
+	{
+		text-align: center;
+	}
+	
+	input, textarea, .siguiente
+	{
+		font-size: 1rem;
+	}
+	
+	.card
+	{
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		
+		padding: 1rem;
+		
+		overflow: hidden;
+	}
+	
+	.container
+	{
+		width: 100%;
+		height: 100%;
+		max-height: initial;
+		padding: 1rem;
+	}
+	
+	.foto
+	{
+		max-height: initial;
+		margin: 1rem;
+		border-radius: 6rem;
+	}
+	
+	#Card4Pic
+	{
+		max-height: initial;
+	}
+	
+	#Card1, #Card4
+	{
+		flex-direction: row-reverse;
+	}
+	
+	#presentation
+	{
+		margin-bottom: 3rem;
+	}
+	
+	#Card1Container
+	{
+		animation: slideInFromLeft 2s;
+	}
+	
+	@keyframes slideInFromLeft
+	{
+		0%
+		{
+			transform: translateX(-100%);
+		}
+
+		100%
+		{
+			transform: translateX(0);
+		}
+	}
+	
+	#Card1Pic
+	{
+		animation: slideInFromRight 2s;
+	}
+	
+	@keyframes slideInFromRight
+	{
+		0%
+		{
+			transform: translateX(100%);
+		}
+
+		100%
+		{
+			transform: translateX(0);
+		}
+	}
+	
+	#Card3
+	{
+		
 	}
 }

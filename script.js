@@ -1,8 +1,10 @@
 /* TO-DO LIST & Bugs a arreglar */
 
-/* input[type=submit] que genere un modal avisando que es falso! */
+/* Media-queries para Tablet, Desktop y Smart TV */
 
-/* organizar media-queries para smartphones y de ahí crear laptops (igual que tablets) y desktops (tener en cuenta widescreens/alto DPI) */
+/* Modificar botón toggle dark mode para que sea de las mismas dimensiones que el botón back-to-top */
+
+/* Formato Card3 */
 
 const showOnPx = 100;
 
