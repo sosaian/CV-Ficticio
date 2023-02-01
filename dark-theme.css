@@ -1,27 +1,118 @@
+/* ******************************** */
+/*            || SITEWIDE           */
+/* ******************************** */
+
+/* 
+Organizo estos archivos css guiándome de este articulo de MDN 
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+*/
+
 *
 {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html
 {
 	scroll-behavior: smooth;
-}
-
-@keyframes fadeIn
-{
-	from {opacity: 0} to {opacity: 1}
+	overflow: auto;
+	font-size: 2vh;
 }
 
 body
 {
 	background-color: #121212;
-	color: #f2f2f2;
+	color: #f2f2f2; 
 	font-family: Helvetica;
-	max-width: 1920px;
-	margin: 0px;
-	
+	margin: 0;
+	width: 100%;
+	height: 100%;
 	animation: fadeIn 3s;
+	
+	display: flex;
+}
+
+form
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 95vw;
+}
+
+.wrapper
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	
+	/* Este height genera problemas cada vez que la barra de dirección del navegador mobile aparece. Técnicamente lo que ocurre es que vh calcula la máxima altura posible, sin la barra de direcciones; ergo arruina el diseño responsive de la página cada vez que aparece esta barra dinámicamente. */
+
+	height: 100vh;
+	
+	/* Para solucionar ese problema decidí diseñar la página con padding-bottom para ajustar todos los container a la misma parte visible en cada card, adrede. */
+	
+	padding-top: 0rem;
+	padding-bottom: 3rem;
+}
+
+#Card4Pic
+{
+	max-height: 25%;
+}
+
+.container
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 95%;
+	overflow: hidden;
+}
+
+#Card2, #Card4
+{
+	background-color: #f2f2f250;
+}
+
+
+/* ******************************** */
+/*          || TYPOGRAPHY           */
+/* ******************************** */
+
+h1, h2, p, ul, li
+{
+	padding: 0;
+	margin: 1rem;
+}
+
+.siguiente
+{
+	border: none;
+	outline: none;
+	background-color: #f2f2f2;
+	color: #121212;
+	padding: 1rem;
+	margin: 1rem;
+	border-radius: 1rem;
+	cursor: pointer;
+	
+	width: 50%;
+	max-width: 95vw;
+	
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121233;
 }
 
 a:link, a:visited, a:hover, a:active
@@ -31,102 +122,65 @@ a:link, a:visited, a:hover, a:active
 	style= "cursor:pointer";
 }
 
-div
+ul > h2
 {
-	display: flex;
+	margin: 1rem;
 }
 
 label
 {
-	padding: 10px;
-	display: flex;
+	padding: 1rem;
+    display: flex;
 	justify-content: flex-start;
-    width: 100%;
 }
 
 input
 {
-	border-radius: 15px;
-	border: 0px;
-	padding: 10px;
+	font-family: Helvetica;
+	border-radius: 1rem;
+	border: 0;
+	padding: 1rem;
 	width: 100%;
-	box-shadow: 3px 3px 3px 3px #12121233;	
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121233;
 }
 
 input[type=submit]
 {
 	background-color: #f2f2f2;
 	color: #121212;
-	border: 1px solid #f2f2f225;
-	border-radius: 15px;
 	cursor: pointer;
-	width: 100%;
+	width: 50%;
+	margin: 1rem;
 }
 
 textarea
 {
-	min-height: 96px;
-	max-height: 306px;
+	font-family: Helvetica;
+	min-height: 6rem;
+	max-height: 20rem;
 	resize: vertical;
-	border: 0px;
-	border-radius: 15px;
-	padding: 10px;
+	border: 0;
+	border-radius: 1rem;
+	padding: 1rem;
+	margin-bottom: 16px;
 	width: 100%;
-	
-	box-shadow: 3px 3px 3px 3px #12121233;
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121233;
 }
 
-.wrapper
-{
-	flex-direction: column;
-	overflow: auto;
-}
 
-.card
-{
-	justify-content: space-evenly;
-	border-radius: 0px;
-	height: 100vh;
-}
-
-.container
-{
-	flex-direction: column;
-	justify-content: center;
-	opacity: 100%;
-	transition: opacity 0.5s;
-}
+/* ******************************** */
+/*            || IMAGES             */
+/* ******************************** */
 
 .foto
 {
-	border-radius: 100px;
+	width: 100%;
 	max-width: 100%;
-	height: auto;
-	max-height: 90vh;
+	max-height: 40vh;
 	object-fit: cover;
-	box-shadow: 3px 3px 3px 3px #12121233;
-	margin: 10px;
-}
-
-.Card3Aux
-{
-	justify-content: space-evenly;
-	max-width: 75vw;
-}
-
-.siguiente
-{
-	border: none;
-	outline: none;
-	background-color: #f2f2f2;
-	color: #121212;
-	cursor: pointer;
-	padding: 15px;
-	border-radius: 20px;
-	opacity: 100%;
-	transition: opacity 0.5s;
-	
-	box-shadow: 3px 3px 3px 3px #12121233;
+	border-radius: 1rem;	
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121233;	
+	overflow: hidden;
 }
 
 .dark_theme
@@ -136,20 +190,30 @@ textarea
 
 .iconos
 {
-	height: 48px;
-	width: 48px;
-	margin-right: 20px;
+	height: 2rem;
+	width: 2rem;
+	margin-right: 1rem;
 	vertical-align: middle;
 	
 	/* Este margen arregla un problema de alineacion vertical de los iconos de un proveedor específico */
 	
-	margin-bottom: 2px;
+	margin-bottom: 0.125rem;
 }
 
-.aux
+
+/* ******************************** */
+/*   || ANMIATIONS AND TRANSITIONS  */
+/* ******************************** */
+
+/* Fade-in animation */
+
+@keyframes fadeIn
 {
-	margin-bottom: 0px;
+	from {opacity: 0} to {opacity: 1}
 }
+
+
+/* Slide-in from left animation */
 
 @keyframes slideInFromLeft
 {
@@ -164,125 +228,40 @@ textarea
   }
 }
 
-#Card1Container
-{
-	flex-direction: column;
-	justify-content: center;
-	
-	animation: 1s ease-out 0s 1 slideInFromLeft;
-}
-
-#presentation
-{
-	margin-bottom: 100px;
-}
-
-#Card2, #Card4
-{
-	background-color: #f2f2f250;
-}
-
-#habilidades > li
-{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-#Card3
-{
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-}
-
-#SobreMi
-{
-	flex-direction: column;
-	justify-content: center;
-	margin: 10px;
-}
-
-#linksRelevantes
-{
-	flex-direction: column;
-	justify-content: center;
-	margin: 10px;
-}
-
-#linksRelevantesUl > li
-{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-#Card3Siguiente
-{
-	width: 75vw;
-}
-
-#Card4Container
-{
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 40vw;
-	margin: 10px;
-}
-
-#Card4Container > form
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-	width: 100%;
-}
-
-#habilidades
-{
-	flex-direction: column;
-	justify-content: space-evenly;
-	align-items: center;
-	margin: 10px;
-}
-
-
 
 /* ******************************** */
-/*         BOTON BACK-TO-TOP        */
+/*         || EXTRA FEATURES        */
 /* ******************************** */
+
+/* || BOTON BACK-TO-TOP */
 
 .back-to-top
 {
-	position: fixed;
-	bottom: 15px;
-	right: 15px;
+	position: fixed;	
+    top: 1.25rem;
+    right: 1.25rem;	
 	border: none;
 	outline: none;
 	background-color: #f2f2f2;
 	color: #121212;
 	cursor: pointer;
-	padding: 15px;
-	border-radius: 20px;
+	padding: 1rem;
+	border-radius: 1rem;
 	opacity: 100%;
-	box-shadow: 3px 3px 3px 3px #12121233;
-	
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121233;
+	font-size: 1rem;
 	visibility: visible;
 	transition-delay: 0s;
 	transition: visibility 0s linear, opacity 0.5s linear;
 }
 
 
+/* || PROGRESS BAR */
 
-/* ******************************** */
-/*           PROGRESS BAR           */
-/* ******************************** */
 
 .progress-bar
 {
-  height: 5px;
+  height: 0.3125rem;
   background-color: #f2f2f2;
   position: fixed;
   top: 0;
@@ -290,31 +269,29 @@ textarea
 }
 
 
+/* || BOTON TOGGLE TEMA OSCURO */
 
-/* ******************************** */
-/*     BOTON TOGGLE TEMA OSCURO     */
-/* ******************************** */
 
 /* Formateando el checkbox per se */
 
 .toggleDarkMode
 {
 	position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 1.25rem;
+    right: 1.25rem;
+	
+	margin: 0; /* override useragent stylesheets */
+	
     appearance: none;
-    -webkit-appearance : none;
-    -moz-appearance : none;
-    -o-appearance : none;
-    width: 80px;
-    height: 40px;
+    width: 5rem;
+    height: 2.5rem;
     background: rgb(232, 161, 57);
-    border-radius: 22px;
+    border-radius: 1.375rem;
     cursor: pointer;
     outline: none;
 	opacity: 100%;
 	
-	box-shadow: 3px 3px 3px 3px #12121225;
+	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem #12121233;
 	
 	visibility: visible;
 	transition-delay: 0s;
@@ -327,12 +304,12 @@ textarea
 {
     content: '';
     position: absolute;
-    width: 40px;
-    height: 35px;
+    width: 2.5rem;
+    height: 2.1875rem;
     background-color: #f2f2f2;
-    border-radius: 35px;
-    top: 2px;
-    left: 2px;
+    border-radius: 2.1875rem;
+    top: 0.125rem;
+    left: 0.125rem;
     cursor: pointer;
     transition: .3s linear;
 }
@@ -341,7 +318,7 @@ textarea
 
 .toggleDarkMode:checked::before
 {
-    left: 37px;
+    left: 2.3125rem;
 }
 
 
@@ -349,14 +326,12 @@ textarea
 
 .toggleDarkMode:checked
 {
-    background: #f2f2f225;
+    background-color: #121212;
 }
 
 
+/* || CLASS HIDDEN Y DISABLE */
 
-/* ******************************** */
-/*	    CLASS HIDDEN Y DISABLE      */
-/* ******************************** */
 
 /* Intencionalmente al final para evitar repetir este código */
 
@@ -373,121 +348,211 @@ textarea
 }
 
 
+/* || SNACKBAR */
 
-/* ******************************** */
-/*	         MEDIA QUERIES          */
-/* ******************************** */
+/* El snackbar - ubicado en el inferior de la pantalla y centrado. */
 
-/* SMARTPHONES */
-@media only screen and (max-width: 767px)
+#formSnackbar
 {
+	/* Oculto por default. Visible al clickear */
+	visibility: hidden;
+	min-width: 20rem;
+
+	/* Alineando el div con un ancho dinamico/indefinido */
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%);
+
+	background-color: #f2f2f2;
+	color: #121212;
+	text-align: center;
+	border-radius: 1rem;
+	padding: 1rem;
+
+	/* Agrego un z-index por si es necesario */
+	z-index: 1;
+
+	/* 3rem desde el inferior */
+	bottom: 6rem;
+}
+
+/* Muestro el snackbar cuando clickeo el boton (agrego una clase con JavaScript) */
+
+#formSnackbar.show
+{
+	visibility: visible;
+
+	/* Agrego animaciones; 0.5 para que el snackbar haga fadein y fadeout.
+	ademas agrego un delay de 2.5 segundos para el fadeout */
+
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animaciones para que el snackbar tenga un fadein y fadeout */
+
+@-webkit-keyframes fadein
+{
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 6rem; opacity: 1;}
+}
+
+@keyframes fadein
+{
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 6rem; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout
+{
+	from {bottom: 6rem; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout
+{
+	from {bottom: 6rem; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+}
+
+
+
+/* ******************************** */
+/*	      || MEDIA QUERIES          */
+/* ******************************** */
+
+/* Para evitar perder más tiempo armando a mano cada estilo, segmento en dos media queries principales: mobile + tablet, y laptop + desktop. */
+
+/* || SMARTPHONES *//* max-width: 767px */
+@media only screen and (max-width: 1023px)
+{
+	h1, h2, p
+	{
+		text-align: center;
+	}
+	
+	ul > h2
+	{
+		text-align: center;
+	}
+}
+
+/* || LAPTOPS *//* min-width: 768px */
+@media only screen and (min-width: 1024px)
+{
+	html
+	{
+		font-size: 2.5vh;
+	}
+	
+	h1
+	{
+		text-align: center;
+	}
+	
+	input, textarea, .siguiente
+	{
+		font-size: 1rem;
+	}
+	
 	.card
 	{
-		flex-direction: column;
+		flex-direction: row;
+		justify-content: space-evenly;
 		align-items: center;
-		height: 100vh;
-	}
-	
-	#Card1, #Card4
-	{
-		flex-direction: column-reverse;
-		align-items: center;
-		height: 100vh;
-	}
-	
-	.foto
-	{
-		max-height: 40vh;
-		max-width: 90vw;
+		
+		padding: 1rem;
+		
+		overflow: hidden;
 	}
 	
 	.container
 	{
-		max-width: 90vw;
-		max-height: auto;
+		width: 100%;
+		height: 100%;
+		max-height: initial;
+		padding: 1rem;
+	}
+	
+	.foto
+	{
+		max-height: initial;
+		margin: 1rem;
+		border-radius: 6rem;
+	}
+	
+	#Card4Pic
+	{
+		max-height: initial;
+	}
+	
+	#Card1, #Card4
+	{
+		flex-direction: row-reverse;
 	}
 	
 	#presentation
 	{
-		margin-bottom: 0px;
+		margin-bottom: 3rem;
 	}
 	
-	.Card3Aux
+	#Card1Container
+	{
+		animation: slideInFromLeft 2s;
+	}
+	
+	@keyframes slideInFromLeft
+	{
+		0%
+		{
+			transform: translateX(-100%);
+		}
+
+		100%
+		{
+			transform: translateX(0);
+		}
+	}
+	
+	#Card1Pic
+	{
+		animation: slideInFromRight 2s;
+	}
+	
+	@keyframes slideInFromRight
+	{
+		0%
+		{
+			transform: translateX(100%);
+		}
+
+		100%
+		{
+			transform: translateX(0);
+		}
+	}
+	
+	/* Ajusto la Card3 para mostrar mejor la información de los items Sobre Mi y los Links Relevantes */
+	
+	#Card3
 	{
 		flex-direction: column;
 	}
 	
-	#habilidades > ul
+	#Card3Aux
 	{
-		margin: 0px;
+		flex-direction: row;
 	}
-	
+
 	#linksRelevantes
 	{
-		margin: 0px;
+		max-width: 33vw;
 	}
 	
-	#Card4Container > form
+	#Card3 > .siguiente
 	{
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-	}
-	
-	label
-	{
-		justify-content: center;
-	}
-	
-	input, textarea
-	{
-		width: 90vw;
-	}
-	
-	input[type=submit]
-	{
-		margin-bottom: 0px;
-		width: 45vw;
-		padding: 15px;
-		border: 0px;
-	}
-	
-	ul
-	{
-		margin: 0px;
-		padding-left: 0px;
+		/* No lo hace exactamente igual de ancho que los demás botones .siguiente, pero visualmente mantiene la armonía. */
 		
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: center;
+		width: 25%;
 	}
-	
-	.Card3Aux
-	{
-		max-width: 90vw;
-	}
-	
-	.iconos
-	{
-		height: 32px;
-		width: 32px;
-	}
-	
-	#card2Siguiente, #card3Siguiente
-	{
-		width: 45vw;
-	}
-
-/* TABLETS */
-@media only screen and (min-width: 768px) and (max-width: 1023px)
-{
-}
-
-
-/* DESKTOPS */
-@media only screen and (min-width: 1024px)
-{
-	/* Tecnicamente no debería ser necesario... inicialmente lo organicé para una desktop */
 }

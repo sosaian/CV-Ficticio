@@ -1,6 +1,12 @@
-/* TO-DO LIST Bugs a arreglar */
+/* TO-DO LIST & Bugs a arreglar */
 
-/* NADA... ¿ :D ? */
+/* Media-queries para Tablet, Desktop y Smart TV */
+
+/* Modificar botón toggle dark mode para que sea de las mismas dimensiones que el botón back-to-top */
+
+/* Probar mejores combinaciones de colores para Dark Mode */
+
+/* */
 
 const showOnPx = 100;
 
@@ -88,4 +94,15 @@ function toggleTheme()
 	{
 		theme.setAttribute('href', 'light-theme.css');
 	}
+}
+
+function formSnackbar() {
+  // Get the form snackbar DIV
+  var snackbar = document.getElementById("formSnackbar");
+
+  // Add the "show" class to DIV
+  snackbar.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
 }
