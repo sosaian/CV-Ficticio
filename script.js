@@ -4,7 +4,9 @@
 
 /* Modificar botón toggle dark mode para que sea de las mismas dimensiones que el botón back-to-top */
 
-/* Formato Card3 */
+/* Probar mejores combinaciones de colores para Dark Mode */
+
+/* */
 
 const showOnPx = 100;
 

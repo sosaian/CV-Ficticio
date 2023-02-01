@@ -532,8 +532,27 @@ textarea
 		}
 	}
 	
+	/* Ajusto la Card3 para mostrar mejor la información de los items Sobre Mi y los Links Relevantes */
+	
 	#Card3
 	{
+		flex-direction: column;
+	}
+	
+	#Card3Aux
+	{
+		flex-direction: row;
+	}
+
+	#linksRelevantes
+	{
+		max-width: 33vw;
+	}
+	
+	#Card3 > .siguiente
+	{
+		/* No lo hace exactamente igual de ancho que los demás botones .siguiente, pero visualmente mantiene la armonía. */
 		
+		width: 25%;
 	}
 }
